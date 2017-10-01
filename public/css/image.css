@@ -1,0 +1,19 @@
+body        { padding-top:30px; }
+form        { padding-bottom:20px; }
+
+.image    { 
+	padding-bottom:20px; 
+	float: left;
+	padding: 3px;
+	max-width: 200px;
+}
+.stick-b {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+.frame {
+    width: 323px;
+    height: 270px;
+    float: right;
+}

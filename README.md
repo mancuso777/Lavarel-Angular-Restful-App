@@ -2,16 +2,17 @@
 A Lavarel-Angular-Restful Application
 
 to run the seeder run the command
-php artisan db:seed --class=ImageUploader
+php artisan db:seed
 
 #SQL
 CREATE SCHEMA `twelfthman` DEFAULT CHARACTER SET latin1 ;
 grant all on twelfthman.* to 'root' identified by 'root';
 CREATE TABLE `twelfthman`.`images` (
   `images_id` INT NOT NULL AUTO_INCREMENT,
-  `image_data` MEDIUMBLOB NULL,
+  `image_url`  VARCHAR(150) NULL,
   `image_name` VARCHAR(100) NULL,
   `image_alt_text` VARCHAR(45) NULL,
+  `image_mimeType` VARCHAR(45) NULL,
   `image_ext` TINYTEXT NULL,
   `deleted` INT NULL DEFAULT 0,
   PRIMARY KEY (`images_id`),
@@ -19,12 +20,5 @@ CREATE TABLE `twelfthman`.`images` (
 )
 
 TODO: Create migrations script app/database/migrations/
-public function up()
-{
-    Schema::create('images', function(Blueprint $table)
-    {
-        $table->increments('images_id');
-        ...
-    });
-}
-
+TODO: destry to Update deleted flag
+TODO: downloadImage and uploadImage

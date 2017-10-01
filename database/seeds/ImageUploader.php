@@ -24,20 +24,23 @@ class ImageUploader extends Seeder
         foreach ($images as $key => $image) {
 
         	if($filesystem->size($image->getPathname()) > 2000000 ){
-        		//TODO: resize the file if is too big
+        		//TODO: resize the file if is too big (http://image.intervention.io)
         		echo ' WARNING! '.$image->getPathname().' is too big: Please optimize this image to less than 2MB and try again ';
 
         	}else{
-        		//copy the original file to storage
-        		$path = 'public/images/'.$image->getFilename();
+        		//copy the original file to storage 
+                $image_url = 'images/'. date( 'Y-m-d' ) . '-' . str_random( 10 ) . $image->getFilename();
         		$imageFile = $filesystem->get($image->getPathname());
-        		Storage::put($path, $imageFile);
 
-        		//save a copy in the database and give a unique name
+                Storage::disk('public')->put($image_url, $imageFile);
+
+        		//save a copy in the database and give a unique name, could use  'image_blob' => file_get_contents($image) if i want save the image as blob ;]
+
 	        	DB::table('images')->insert([
-		            'image_data' => file_get_contents($image),
-		            'image_name' => date( 'Y-m-d' ) . '-' . str_random( 10 ) . $image->getFilename(),
-		            'image_alt_text' => $image->getFilename(),
+		            'image_url' => $image_url,
+		            'image_name' => $filesystem->name($image->getPathname()),
+		            'image_alt_text' => 'Image '.$filesystem->name($image->getPathname()),
+                    'image_mimeType' => $filesystem->mimeType($image->getPathname()),
 		            'image_ext' => $filesystem->extension($image->getPathname()),
 		            'deleted' => 0
 		        ]);

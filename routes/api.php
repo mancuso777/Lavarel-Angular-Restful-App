@@ -16,3 +16,18 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::get('/', function() {   
+    View::make('index'); //skip Laravel Blade
+});
+ 
+Route::group(array('api'), function() {
+
+    Route::resource('images', 'ImageController');
+
+});
+
+/*App::missing(function($exception) { 
+    return View::make('index'); 
+});*/

@@ -31,22 +31,22 @@
             <h4>Image Gallery</h4>
         </div>
         <div class="frame" ng-repeat="image in images">
-        <div ng-show="!image.deleted">
+        <div>
            <span >Image Name {{ image.image_name }}</span>
            <img class="image" src="{{ image.image_url }}" alt="{{ image.image_alt_text }}">
            <form ng-submit="downloadImage(image.image_id)">    
              <button type="submit" class="btn btn-primary btn-sm">Download</button> 
            </form> 
-           <form ng-submit="deleteImage(image.image_id)">    
-             <button type="submit" class="btn btn-primary btn-sm">Delete</button>
-           </form> 
            </div>
         </div>
         <div class="well stick-b">
+          <div class="col-md-12">
+            <h1> Upload Images</h1>
             <form ng-submit="uploadImage()">    
-                <input class="btn btn-primary btn-sm" type="file" id="imageInput" />
-                <button type="submit" class="btn btn-primary btn-sm">Upload Image</button>  
+                <input class="btn btn-primary btn-lg" type="file" id="imageInput" /><br/><br/>
+                <button type="submit" class="btn btn-primary btn-lg">Upload</button>  
             </form>           
+          </div>
         </div>
     </div> 
 </body> 

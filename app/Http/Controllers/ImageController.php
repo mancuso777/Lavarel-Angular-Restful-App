@@ -50,7 +50,11 @@ class ImageController extends BaseController {
     public function destroy($id)
     {
 
-        DB::table('images')->where('image_id', $id)->limit(1)->update(array('deleted' => 1));
+        if(DB::table('images')->where('image_id', $id)->value('deleted')==0){
+            DB::table('images')->where('image_id', $id)->limit(1)->update(array('deleted' => 1));
+        }else{
+            DB::table('images')->where('image_id', $id)->limit(1)->update(array('deleted' => 0));
+        }
 
         return Response::json(array('success' => true));
     }

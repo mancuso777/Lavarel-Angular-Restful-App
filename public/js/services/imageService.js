@@ -20,6 +20,7 @@ angular.module('imageService', [])
         destroy : function(id) {
             return $http.delete('/api/images/' + id);
         }
+        
     }
 
 });

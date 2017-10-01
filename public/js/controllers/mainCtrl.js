@@ -59,10 +59,10 @@ angular.module('mainCtrl', [])
 
     $scope.deleteImage = function(id) {
 
-        Images.destroy(id)
+        Image.destroy(id)
             .success(function(data) {
 
-                Images.get()
+                Image.get()
                     .success(function(getData) {
                         $scope.images = getData;
                     });

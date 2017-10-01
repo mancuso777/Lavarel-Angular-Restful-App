@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Routing\Controller as BaseController;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Response;
 use App\Images;
@@ -51,16 +51,7 @@ class ImageController extends BaseController {
     public function destroy($id)
     {
 
-               DB::table('images')->where('image_id', $id)->limit(1)  ->update(array('name' => Input::get('name'), 'detail' => Input::get('detail'), 'image' => $newupload));
-
-        DB::table('images')->update([
-            'image_url' => $image_url,
-            'image_name' => $filesystem->name($image->getPathname()),
-            'image_alt_text' => 'Image '.$filesystem->name($image->getPathname()),
-            'image_mimeType' => $filesystem->mimeType($image->getPathname()),
-            'image_ext' => $filesystem->extension($image->getPathname()),
-            'deleted' => 0
-        ]);
+        DB::table('images')->where('image_id', $id)->limit(1)->update(array('deleted' => 1));
 
         return Response::json(array('success' => true));
     }

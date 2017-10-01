@@ -28,7 +28,6 @@ class ImageController extends BaseController {
     {
 
         /*
-
         //TODO get the file from upload form
 	    //save a copy in the database and give a unique name
         Images::create(array(

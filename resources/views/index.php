@@ -14,6 +14,17 @@
 </head> 
 
 <body class="container" ng-app="imageApp" ng-controller="mainController"> 
+        <div class="info stick-a">
+          <div class="col-md-4">
+            <a class="btn btn-default btn-sm" href="/">Index</a>
+          </div>
+          <div class="col-md-4">
+           <a class="btn btn-default btn-sm" href="/all">All</a>
+          </div>
+          <div class="col-md-4">
+            <a class="btn btn-default btn-sm" href="/deleted">Deleted</a>
+          </div>
+        </div>
     <div class="row">
         <div class="page-header">
             <h2>Laravel and Angular Single Page Application</h2>

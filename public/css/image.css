@@ -17,3 +17,12 @@ form        { padding-bottom:20px; }
     height: 270px;
     float: right;
 }
+.stick-a {
+	position: fixed;
+	top: 0px;
+	width: 400px;
+	padding: 20px;
+}
+.stick-a a {
+	font-size: 16px;
+}

@@ -50,7 +50,17 @@ class ImageController extends BaseController {
      */
     public function destroy($id)
     {
-        //TODO Update deleted flag
+
+               DB::table('images')->where('image_id', $id)->limit(1)  ->update(array('name' => Input::get('name'), 'detail' => Input::get('detail'), 'image' => $newupload));
+
+        DB::table('images')->update([
+            'image_url' => $image_url,
+            'image_name' => $filesystem->name($image->getPathname()),
+            'image_alt_text' => 'Image '.$filesystem->name($image->getPathname()),
+            'image_mimeType' => $filesystem->mimeType($image->getPathname()),
+            'image_ext' => $filesystem->extension($image->getPathname()),
+            'deleted' => 0
+        ]);
 
         return Response::json(array('success' => true));
     }

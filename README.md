@@ -8,7 +8,7 @@ php artisan db:seed
 CREATE SCHEMA `twelfthman` DEFAULT CHARACTER SET latin1 ;
 grant all on twelfthman.* to 'root' identified by 'root';
 CREATE TABLE `twelfthman`.`images` (
-  `images_id` INT NOT NULL AUTO_INCREMENT,
+  `image_id` INT NOT NULL AUTO_INCREMENT,
   `image_url`  VARCHAR(150) NULL,
   `image_name` VARCHAR(100) NULL,
   `image_alt_text` VARCHAR(45) NULL,

@@ -23,10 +23,10 @@
         <div ng-show="!image.deleted">
            <span >Image Name {{ image.image_name }}</span>
            <img class="image" src="{{image.image_url}}" alt="{{ image.image_alt_text }}">
-           <form ng-submit="downloadImage('{{ image.images_id}}'')">    
+           <form ng-submit="downloadImage('{{ image.image_id}}')">    
              <button type="submit" class="btn btn-primary btn-sm">Download</button> 
            </form> 
-           <form ng-submit="deleteImage('{{ image.images_id}}'')">    
+           <form ng-submit="deleteImage({{ image.image_id }})">    
              <button type="submit" class="btn btn-primary btn-sm">Delete</button>
            </form> 
            </div>

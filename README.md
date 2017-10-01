@@ -1,10 +1,21 @@
 # Lavarel-Angular-Restful-App
+
 A Lavarel-Angular-Restful Application
+
+Create and copy your files to the folder /public/import on your web server 
+eg: /var/www/html/tewlfth/public/import
 
 to run the seeder run the command
 php artisan db:seed
 
+
+TODO: Create migrations script app/database/migrations/
+TODO: downloadImage and uploadImage functions
+
+
+
 #SQL
+
 CREATE SCHEMA `twelfthman` DEFAULT CHARACTER SET latin1 ;
 grant all on twelfthman.* to 'root' identified by 'root';
 CREATE TABLE `twelfthman`.`images` (
@@ -18,7 +29,3 @@ CREATE TABLE `twelfthman`.`images` (
   PRIMARY KEY (`images_id`),
   UNIQUE INDEX `images_id_UNIQUE` (`images_id` ASC));
 )
-
-TODO: Create migrations script app/database/migrations/
-TODO: destry to Update deleted flag
-TODO: downloadImage and uploadImage

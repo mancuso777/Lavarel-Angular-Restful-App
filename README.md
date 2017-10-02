@@ -10,14 +10,18 @@ php artisan db:seed
 
 
 TODO: Create migrations script app/database/migrations/
+
 TODO: downloadImage and uploadImage functions
-TODO: Create partials abd use ng-view for the links
+
+TODO: Create partials and use ng-view for the links
 
 
 
 #SQL
 
+
 CREATE SCHEMA `twelfthman` DEFAULT CHARACTER SET latin1 ;
+
 
 CREATE TABLE `twelfthman`.`images` (
   `image_id` INT NOT NULL AUTO_INCREMENT,

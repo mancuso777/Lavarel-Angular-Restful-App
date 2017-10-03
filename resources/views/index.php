@@ -24,17 +24,14 @@
             <a class="btn btn-default btn-sm" href="/deleted">Deleted</a>
           </div>
         </div>
-    <div class="row">
+    <div class="row" ng-controller="mainController">
         <div class="page-header">
             <h2>Laravel and Angular Single Page Application</h2>
             <h4>Image Gallery</h4>
         </div>
-
         <div class="">
           <div ng-view></div>
         </div> 
-
-
         <div class="well stick-b">
             <form ng-submit="uploadImage()">    
                 <input class="btn btn-primary btn-sm" type="file" id="imageInput" />

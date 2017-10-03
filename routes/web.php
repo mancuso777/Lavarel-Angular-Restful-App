@@ -14,11 +14,3 @@
 Route::get('/', function () {
     return view('index');
 });
-
-Route::get('/all', function () {
-    return view('all');
-});
-
-Route::get('/deleted', function () {
-    return view('deleted');
-});

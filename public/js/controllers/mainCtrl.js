@@ -1,6 +1,21 @@
-angular.module('mainCtrl', [])
-
-.controller('mainController', function($scope, $http, Image) {
+angular.module('mainCtrl', ['ngRoute', 'ngResource'])
+.config(function ($routeProvider, $locationProvider)
+{
+    $routeProvider
+        .when('/',{
+            controller: 'mainController',
+            templateUrl: '../../partials/index.html'
+        })
+        .when('/deleted',{
+        controller: 'mainController',
+        templateUrl: '../../partials/deleted.html'
+    });
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    });
+})
+.controller('mainController', function($scope, $http, $route, Image) {
 
     $scope.imageData = {};
 
@@ -65,9 +80,11 @@ angular.module('mainCtrl', [])
                 Image.get()
                     .success(function(getData) {
                         $scope.images = getData;
+                        $route.reload();
                     });
 
             });
     };
 
 });
+

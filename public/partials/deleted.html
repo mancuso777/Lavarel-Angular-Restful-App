@@ -1,0 +1,13 @@
+<h3>Deleted</h3>
+<div class="frame" ng-repeat="image in images">
+<div ng-controller="mainController" ng-show="image.deleted">
+   <span >Image Name {{ image.image_name }}</span>
+   <img class="image" src="{{ image.image_url }}" alt="{{ image.image_alt_text }}">
+   <form ng-submit="downloadImage(image.image_id)">    
+     <button type="submit" class="btn btn-primary btn-sm">Download</button> 
+   </form> 
+   <form ng-submit="deleteImage(image.image_id)">    
+     <button type="submit" class="btn btn-primary btn-sm">Restore</button>
+   </form> 
+   </div>
+</div>

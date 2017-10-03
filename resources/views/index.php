@@ -17,12 +17,8 @@
 
 <body class="container" ng-app="imageApp"> 
         <div class="info stick-a">
-          <div class="col-md-4">
             <a class="btn btn-default btn-sm" href="/">Active</a>
-          </div>
-          <div class="col-md-4">
             <a class="btn btn-default btn-sm" href="/deleted">Deleted</a>
-          </div>
         </div>
     <div class="row" ng-controller="mainController">
         <div class="page-header">

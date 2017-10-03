@@ -3,9 +3,9 @@
    <img class="image" src="{{ image.image_url }}" alt="{{ image.image_alt_text }}">
    <span class="title" >Image Name {{ image.image_name }}</span>
    <form ng-submit="downloadImage(image.image_id)">    
-     <button type="submit" class="btn btn-primary btn-sm">Download</button> 
+     <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-caret-down" aria-hidden="true"></i></button> 
    </form> 
    <form ng-submit="deleteImage(image.image_id)">    
-     <button type="submit" class="btn btn-primary btn-sm">Restore</button>
+     <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
    </form> 
 </span>

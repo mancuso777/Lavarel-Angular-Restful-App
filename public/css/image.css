@@ -1,5 +1,11 @@
-body        { padding-top:30px; }
-form        { padding-bottom:20px; }
+body{ 
+	padding-top:30px; 
+}
+form {
+    padding: 2px;
+    float: left;
+    margin-top: 10px;
+}
 
 .image    { 
 	padding-bottom:20px; 
@@ -14,9 +20,15 @@ form        { padding-bottom:20px; }
 	display: none;
 }
 .frame {
-    width: 323px;
-    height: 270px;
+    width: 220px;
+    min-height: 260px;
     float: left;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
 }
 .stick-a {
 	position: fixed;

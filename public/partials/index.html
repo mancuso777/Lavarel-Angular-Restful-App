@@ -1,7 +1,7 @@
 <h3>Index</h3>
-<span class="frame" ng-repeat="image in images" ng-show="!image.deleted">
-   <span >Image Name {{ image.image_name }}</span>
+<span class="frame col-sm" ng-repeat="image in images" ng-show="!image.deleted">
    <img class="image" src="{{ image.image_url }}" alt="{{ image.image_alt_text }}">
+   <span class="title">Image Name {{ image.image_name }}</span>
    <form ng-submit="downloadImage(image.image_id)">    
      <button type="submit" class="btn btn-primary btn-sm">Download</button> 
    </form> 

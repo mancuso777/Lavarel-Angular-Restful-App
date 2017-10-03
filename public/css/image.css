@@ -1,17 +1,17 @@
 body{ 
-	padding-top:30px; 
+	background-color: #f3f4f8;
 }
 form {
     padding: 2px;
-    float: left;
+    float: right;
     margin-top: 10px;
+    margin-right: 5px;
 }
-
-.image    { 
-	padding-bottom:20px; 
-	float: left;
-	padding: 3px;
-	max-width: 200px;
+.image {
+    padding-bottom: 4px;
+    width: 300px;
+    background-size: cover;
+    height: 180px;
 }
 .stick-b {
 	position: fixed;
@@ -20,22 +20,38 @@ form {
 	display: none;
 }
 .frame {
-    width: 220px;
-    min-height: 260px;
+    width: 303px;
+    height: 250px;
     float: left;
     margin-right: 10px;
     border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #f7f7f7;
+    background-color: #fff;
     margin-bottom: 10px;
 }
 .stick-a {
-	position: fixed;
-	top: 0px;
-	width: 400px;
-	padding: 20px;
+    position: fixed;
+    top: 0px;
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
 }
 .stick-a a {
 	font-size: 16px;
+}
+.right{
+	float: right;
+}
+.title{
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+.page-header {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+.ng-view{
+	padding: 20px;
 }

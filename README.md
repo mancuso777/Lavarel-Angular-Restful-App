@@ -11,10 +11,7 @@ php artisan db:seed
 
 TODO: Create migrations script app/database/migrations/
 
-TODO: downloadImage and uploadImage functions
-
-TODO: Create partials and use ng-view for the links
-
+TODO: Create downloadImage and uploadImage logic
 
 
 #SQL

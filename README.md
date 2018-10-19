@@ -1,4 +1,4 @@
-# Lavarel-Angular-Restful-App
+# Lavarel-AngularJS-Restful-App
 
 A Lavarel-Angular-Restful Application
 
